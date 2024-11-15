@@ -61,7 +61,7 @@ class Auth:
             return request.headers.get('Authorization, None')
         return None
 
-    def current_user(self, request=None) -> TypeVar:
+    def current_user(self, request=None) -> TypeVar('User'):
         """This function takes a request object as an optional argument
         (defaults to None) and returns a value of type that could be user.
         The purpose

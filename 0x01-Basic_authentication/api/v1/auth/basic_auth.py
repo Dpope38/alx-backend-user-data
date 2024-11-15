@@ -90,7 +90,7 @@ class basicAuth(Auth):
         return email, password
 
     def user_object_from_credentials(
-            self, user_email: str, user_pwd: str) -> TypeVar:
+            self, user_email: str, user_pwd: str) -> TypeVar('User'):
         """Returns the User instance based on the email and password.
 
         Args:
@@ -120,7 +120,7 @@ class basicAuth(Auth):
         # Return the user instance
         return user
 
-    def current_user(self, request=None) -> TypeVar:
+    def current_user(self, request=None) -> TypeVar('User'):
         """Retrieves the User instance for a request.
 
         Args:
